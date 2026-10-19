@@ -1,0 +1,12 @@
+# MATLAB caches, autosaves and local outputs
+slprj/
+*.slxc
+*.asv
+*.autosave
+*.slx.r*
+*.m~
+*.mex*
+build/
+resources/project/
+.DS_Store
+Thumbs.db
