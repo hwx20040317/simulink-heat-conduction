@@ -120,7 +120,7 @@ for k = 1:numel(blocks)
 end
 passed = passed+1;
 fprintf('PASS %02d library callbacks and block dependency audit\n', passed);
-report.projectVersion = '0.1.0';
+report.projectVersion = shc_version;
 report.matlabVersion = version;
 report.passed = passed;
 report.relativeEnergyError = result.relativeEnergyError;
