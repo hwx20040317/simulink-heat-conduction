@@ -15,10 +15,17 @@ positions = [70 100 250 205; 350 100 530 205; 70 310 250 415; 350 310 530 415];
 for k = 1:numel(specs)
     makeElement(['SHCLib/' specs(k).name], positions(k,:), specs(k));
 end
+thermalSpecs = shc_thermal_specs;
+thermalPositions = positions + [580 0 580 0];
+for k = 1:numel(thermalSpecs)
+    shc_add_thermal_element(['SHCLib/' thermalSpecs(k).name], thermalPositions(k,:), thermalSpecs(k));
+end
 note = Simulink.Annotation('SHCLib', sprintf( ...
-    'Heat Conduction 0.1.0\nT1,T2 -> Q1,Q2 | Q1=(T2-T1)/R, Q2=-Q1\nPlanar and coaxial radial resistance elements'));
-note.Position = [65 15 550 70];
-set_param('SHCLib', 'Location', [150 100 830 640], 'Lock', 'on');
+    ['Heat Conduction %s | Signal-flow thermal modeling\n' ...
+    'Conduction, thermal mass, convection and prescribed boundaries\n' ...
+    'Heat entering each temperature node is positive.'], shc_version));
+note.Position = [65 15 1100 70];
+set_param('SHCLib', 'Location', [70 100 1310 650], 'Lock', 'on');
 save_system('SHCLib', libraryFile);
 fprintf('BUILT %s\n', libraryFile);
 end
