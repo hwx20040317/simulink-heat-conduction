@@ -9,6 +9,7 @@
 - 可见性：Public。
 - 许可证：MIT；`LICENSE` 中署名为项目 contributors。
 - 首个版本：`v0.1.0`。
+- 本次更新：`v0.2.0`，增加四类基础热网络元件和恒功率加热/对流散热示例。
 
 GitHub 上公开可见与明确授予开源使用权限不同，因此仓库中包含独立的 LICENSE 文件。参考：[GitHub — Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)。
 
@@ -25,10 +26,10 @@ GitHub 上公开可见与明确授予开源使用权限不同，因此仓库中�
 restoredefaultpath
 addpath(pwd)
 setup_shc(false)
-test_shc
+test_shc_all
 ```
 
-测试报告保存在 `build/validation.json`，发布验证记录可写入 `docs/VALIDATION.md`。其他 MATLAB 版本只有在实际验证通过后再增加兼容声明。
+完整测试报告保存在 `build/validation_v0_2.json`，对应 `docs/VALIDATION_v0.2.0.md`。原导热检查报告仍为 `build/validation.json`。其他 MATLAB 版本只有在实际验证通过后再增加兼容声明。
 
 ## 仓库简介
 

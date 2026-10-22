@@ -1,0 +1,27 @@
+{
+  "projectVersion": "0.2.0",
+  "matlabVersion": "9.14.0.2206163 (R2023a)",
+  "conductionChecks": 24,
+  "thermalChecks": 37,
+  "passed": 61,
+  "conduction": {
+    "projectVersion": "0.2.0",
+    "matlabVersion": "9.14.0.2206163 (R2023a)",
+    "passed": 24,
+    "relativeEnergyError": 9.0221874415874481E-15,
+    "maxTemperatureError": 8.8570320286862625E-5,
+    "generatedUTC": "2026-10-22T11:11:20Z"
+  },
+  "thermal": {
+    "projectVersion": "0.2.0",
+    "passed": 37,
+    "heatingTemperatureError": 1.4921397450962104E-13,
+    "heatingEnergyRelativeError": 1.6554396934224813E-8,
+    "heatingEnergyResidualJ": 0.0008277198467112612,
+    "coarseStepError": 6.6648211216602249E-6,
+    "fineStepError": 3.9952194441639222E-7,
+    "closedTemperatureError": 5.6843418860808015E-14,
+    "closedEnergyRelativeError": 1.3096723705530167E-15
+  },
+  "generatedUTC": "2026-10-22T11:11:25Z"
+}
